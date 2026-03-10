@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Mon premier projet local",
+    "description": "Un projet fait en début d'année.",
+    "technologies": ["HTML", "CSS"],
+    "link": "https://google.com",
+    "type": "local"
+  },
+  {
+    "id": 2,
+    "title": "Maquette Figma",
+    "description": "Design d'une application mobile.",
+    "technologies": ["Figma"],
+    "link": "https://figma.com",
+    "type": "local"
+  }
+]
