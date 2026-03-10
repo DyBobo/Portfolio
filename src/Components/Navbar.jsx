@@ -1,12 +1,38 @@
 import { NavLink } from 'react-router-dom';
+import githubLogo from '../assets/github.png';
+import linkedinLogo from '../assets/linkedin.png'; // C'est bien le bon nom !
 
 const Navbar = () => {
   return (
-    <nav style={{ padding: '10px', borderBottom: '1px solid #ccc', display: 'flex', gap: '15px' }}>
-      <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black', fontWeight: isActive ? 'bold' : 'normal' })}>Accueil</NavLink>
-      <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black', fontWeight: isActive ? 'bold' : 'normal' })}>À Propos</NavLink>
-      <NavLink to="/projects" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black', fontWeight: isActive ? 'bold' : 'normal' })}>Projets</NavLink>
-      <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? 'blue' : 'black', fontWeight: isActive ? 'bold' : 'normal' })}>Contact</NavLink>
+    <nav className="navbar">
+      {/* Zone gauche vide */}
+      <div className="navbar-left"></div>
+
+      {/* Zone centrale (Menu) */}
+      <div className="navbar-center">
+        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
+          Accueil
+        </NavLink>
+        <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>
+          Projets
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>
+          À Propos
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>
+          Contact
+        </NavLink>
+      </div>
+
+      {/* Zone droite (Logos sociaux) */}
+      <div className="navbar-right">
+        <a href="https://github.com/DyBobo" target="_blank" rel="noopener noreferrer" className="social-link">
+          <img src={githubLogo} alt="GitHub" className="social-icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/votre-profil-fictif" target="_blank" rel="noopener noreferrer" className="social-link">
+          <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
+        </a>
+      </div>
     </nav>
   );
 };
