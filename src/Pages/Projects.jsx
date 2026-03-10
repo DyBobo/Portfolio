@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import localProjects from '../data/projects.json';
+import localProjects from '../Data/projects.json';
 import ProjectCard from '../Components/ProjectCard';
 
 const Projects = () => {
