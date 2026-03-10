@@ -1,20 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Importation de tes pages
+// Importation des Pages (Vérifie bien les majuscules sur ton ordinateur !)
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Projects from './Pages/Projects';
+import ProjectDetail from './Pages/ProjectDetail'; // Nouveau : pour le bonus
 import Contact from './Pages/Contact';
 import NotFound from './Pages/NotFound';
 
-// Importation de tes composants (on les remplira juste après)
+// Importation des Composants
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import ScrollToTop from './Components/ScrollToTop'; // Nouveau : pour le scroll auto
 
 function App() {
   return (
     <Router>
-      {/* La Navbar est en dehors de Routes car elle doit apparaître sur TOUTES les pages */}
+      {/* 1. Le ScrollToTop doit être placé ici pour fonctionner sur toutes les pages */}
+      <ScrollToTop />
+
+      {/* 2. La Navbar reste fixe en haut */}
       <Navbar />
 
       <main style={{ padding: '20px', minHeight: '80vh' }}>
@@ -22,8 +27,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          
+          {/* 3. Route Bonus : Détail d'un projet local */}
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+          
           <Route path="/contact" element={<Contact />} />
-          {/* Le path="*" capture toutes les mauvaises URLs et affiche la 404 */}
+          
+          {/* 4. Page 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
