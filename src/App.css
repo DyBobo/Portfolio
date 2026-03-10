@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* --- 1. RÉGLAGES GÉNÉRAUX (Toutes tailles d'écran) --- */
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* --- 2. LA NAVIGATION (NAVBAR) --- */
+nav {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #646cff; /* Couleur différente pour la page active */
+  border-bottom: 2px solid #646cff;
+}
+
+/* --- 3. LES PROJETS (GRID) --- */
+/* C'est ici qu'on gère l'affichage côte à côte sur ordi */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* --- 4. LE FORMULAIRE --- */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* --- 5. LE MODE MOBILE (C'est ici que la magie opère !) --- */
+/* Quand l'écran est petit (téléphone), on change quelques règles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Les liens s'empilent au lieu d'être côte à côte */
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .projects-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    padding: 10px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  /* Pour le QR Code sur la page About */
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
