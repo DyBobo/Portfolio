@@ -2,7 +2,7 @@
 
 Application web vitrine professionnelle développée en React dans le cadre de l'évaluation L3 M2I.
 
-🔗 **Site en ligne :** [URL Vercel à compléter]  
+🔗 **Site en ligne :** https://portfolio-topaz-zeta-93.vercel.app  
 📁 **Repo GitHub :** https://github.com/DyBobo/Portfolio
 
 ---
