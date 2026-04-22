@@ -1,14 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import githubLogo from '../assets/github.png';
-import linkedinLogo from '../assets/linkedin.png'; // C'est bien le bon nom !
+import linkedinLogo from '../assets/linkedin.png';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Zone gauche vide */}
       <div className="navbar-left"></div>
 
-      {/* Zone centrale (Menu) */}
       <div className="navbar-center">
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
           Accueil
@@ -24,13 +22,24 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      {/* Zone droite (Logos sociaux) */}
       <div className="navbar-right">
-        <a href="https://github.com/DyBobo" target="_blank" rel="noopener noreferrer" className="social-link">
+        <a
+          href="https://github.com/DyBobo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          title="GitHub"
+        >
           <img src={githubLogo} alt="GitHub" className="social-icon" />
         </a>
-        <a href="https://www.linkedin.com/in/votre-profil-fictif" target="_blank" rel="noopener noreferrer" className="social-link">
-          <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
+        <a
+          href="https://www.linkedin.com/in/dylan-bolado-56742426b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          title="LinkedIn"
+        >
+          <img src={linkedinLogo} alt="LinkedIn" className="social-icon linkedin-icon" />
         </a>
       </div>
     </nav>

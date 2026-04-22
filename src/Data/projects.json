@@ -1,18 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Mon premier projet local",
-    "description": "Un projet fait en début d'année.",
-    "technologies": ["HTML", "CSS"],
-    "link": "https://google.com",
-    "type": "local"
-  },
-  {
-    "id": 2,
-    "title": "Maquette Figma",
-    "description": "Design d'une application mobile.",
-    "technologies": ["Figma"],
-    "link": "https://figma.com",
-    "type": "local"
+    "title": "Maquette UI — Moqups",
+    "description": "Maquette d'interface réalisée sur Moqups dans le cadre d'un projet de formation. Prototype du site de l'IUT de Rouen.",
+    "technologies": ["Moqups", "UI/UX", "Figma"],
+    "link": "https://app.moqups.com/qDjYApn5ImeKfggM3NtYfNuvUJy9ajTR/edit/page/ad64222d5",
+    "type": "Design"
   }
 ]
