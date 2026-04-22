@@ -1,3 +1,5 @@
+import QRCodeComponent from './QRCodeComponent';
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -8,7 +10,10 @@ const Footer = () => {
             Étudiant M2I — Sécurité Systèmes &amp; Réseaux<br />
             Alternant Gouvernance des Risques &amp; RGPD chez Monext
           </p>
-          <p className="footer-copy">© 2026 — Portfolio L3 M2I</p>
+          <p className="footer-copy">© 2025 — Portfolio L3 M2I</p>
+        </div>
+        <div className="footer-qr">
+          <QRCodeComponent />
         </div>
       </div>
     </footer>
